@@ -7,7 +7,22 @@ import java.util.Scanner;
 
 public class Acak {
 	public static void main(String[] args) throws IOException {
-		BufferedReader in = new BufferedReader(new FileReader(new File("C:/Users/idea/veritrans/inter/tes.txt")));
+		System.out.println("Selamat datang di Acak Kata");
+		System.out.println("Masukkan 1 jika ingin langsung main");
+		System.out.println("Masukkan 2 jika ingin meng-input data sendiri");
+		Scanner s = new Scanner(System.in);
+		System.out.print("Silakan masukkan nomor: ");
+		int no = s.nextInt();
+		String file = null;
+		if(no == 1) {
+			file = "tes.txt";
+		} else if(no == 2) {
+			file = s.next();
+		} else {
+			System.out.println("Harap masukan angka yang sesuai");
+		}
+		// input file kumpulan kata, jika ingin diganti ganti sesuai nama dan path file baru
+		BufferedReader in = new BufferedReader(new FileReader(new File(file)));
 	
         String x = in.readLine();
         
@@ -44,7 +59,7 @@ public class Acak {
 	    boolean bool = true;
 	    while(bool) {
 	    	System.out.print("Jawab: ");
-	    	Scanner sc = new Scanner(System.in);;
+	    	Scanner sc = new Scanner(System.in);
 	    	String ans = sc.next();
 	    	if(ans.equals(rString)) {
 	    		System.out.println("BENAR!!!");
