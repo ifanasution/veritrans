@@ -1,0 +1,5 @@
+buku
+pensil
+kertas
+topi
+rak
