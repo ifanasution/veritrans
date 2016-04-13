@@ -10,24 +10,28 @@ public class Acak {
 		System.out.println("Selamat datang di Acak Kata!");
 		System.out.println("Masukkan 1 jika ingin langsung main.");
 		System.out.println("Masukkan 2 jika ingin meng-input data sendiri.");
-		Scanner s = new Scanner(System.in);
+		
 		System.out.print("Silakan masukkan nomor: ");
+		Scanner s = new Scanner(System.in);
 		int no = s.nextInt();
 		String file = null;
+		
 		if(no == 1) {
+			// menggunakan data default
 			file = "tes.txt";
 		} else if(no == 2) {
+			// menggunakan data inputan
 			file = s.next();
 		} else {
 			System.out.println("Harap masukan angka yang sesuai");
 		}
+		
 		// input file kumpulan kata, jika ingin diganti ganti sesuai nama dan path file baru
 		BufferedReader in = new BufferedReader(new FileReader(new File(file)));
-	
         String x = in.readLine();
-        
-        ArrayList<String> line = new ArrayList<String>();
+     
         // untuk menampung kata-kata dari file
+        ArrayList<String> line = new ArrayList<String>();
         while( x != null ) {
             line.add(x);
             x = in.readLine();
