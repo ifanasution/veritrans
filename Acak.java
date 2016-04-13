@@ -7,9 +7,9 @@ import java.util.Scanner;
 
 public class Acak {
 	public static void main(String[] args) throws IOException {
-		System.out.println("Selamat datang di Acak Kata");
-		System.out.println("Masukkan 1 jika ingin langsung main");
-		System.out.println("Masukkan 2 jika ingin meng-input data sendiri");
+		System.out.println("Selamat datang di Acak Kata!");
+		System.out.println("Masukkan 1 jika ingin langsung main.");
+		System.out.println("Masukkan 2 jika ingin meng-input data sendiri.");
 		Scanner s = new Scanner(System.in);
 		System.out.print("Silakan masukkan nomor: ");
 		int no = s.nextInt();
