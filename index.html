@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+
+    <title>Acak Kata</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <h1>Welcome to Acak Kata!</h1>
+      </header>
+    
+      <div class="content">
+        <div class="row">
+          <div class="col-md-4 col-md-offset-4">
+            <div class="top">
+              <h4>Let's play the game!</h4>
+              <button id="start">START</button>
+            </div>
+
+            <div class="game">
+              <p>Guess: kserta<p>
+              <input type="text" name="answer" placeholder="Type your answer here" id="input"/>
+
+              <div class="answer">
+                <div id="check"></div>
+              </div>
+          
+              <div class="btn">
+                <button id="submit">SUBMIT</button>  
+                <button id="restart">RESTART</button>   
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+        
+      <div class="footer">
+        <p>Copyright &copy; 2016. Siti Fatimah</p>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("#start").on('click', function(){
+          $(".game").show();
+        });
+
+        $("#submit").on('click', function(){
+          var s = document.getElementById("input").value;
+          if(s==="kertas") {
+            document.getElementById("check").innerHTML = "Congratulation, your answer is right!";
+            document.getElementById("check").style.color = "#58FFB2";
+            $("#submit").hide();
+          } else {
+            document.getElementById("check").innerHTML = "Your answer is wrong!";
+            document.getElementById("check").style.color = "#7B17B2";
+          }
+        });
+
+        $("#restart").on('click', function(){
+          window.location.reload();
+        });
+      });
+    </script>
+  </body>
+</html>
